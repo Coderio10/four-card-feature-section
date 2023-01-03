@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+main{
+    min-width: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+:root{
+    /* Primary */
+
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    /* Neutral */
+
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+}
+h1,h2{
+    text-align: center;
+    color: var(--VeryDarkBlue);
+    font-size: 24px;
+}
+h1{
+    font-weight: 300;
+    padding-top: 30px;
+    
+}
+p{
+    color: var(--VeryDarkBlue);
+    font-size: 13px;
+    font-weight: 300;
+    word-break: break-all;
+}
+h3{
+    color: var(--VeryDarkBlue);
+    padding-bottom: 10px;
+}
+section{
+    display: flex;
+    flex-shrink: auto;
+    flex-flow: row wrap;
+    gap: 25px;
+    padding: 20px;
+}
+div{
+    width: 300px;
+    height: 190px;
+    border: 1px solid var(--VeryLightGray);
+    border-radius: 10px;
+    position: relative;
+    padding: 20px;
+    box-shadow: 2px 3px 4px 2px var(--GrayishBlue);
+}
+img{
+    float: right;
+    width: 50px;
+    margin: 20px;
+}
+/* center  section*/
+aside{
+    display: flex;
+    flex-flow: column wrap;
+    grid-gap: 20px;
+}
+/* column 1 and column 4 */
+.col-1, .col-4{
+    margin-top: 100px;
+}
+/* column 1 */
+.col-1{
+    border-top: 3px var(--Cyan) solid; 
+    overflow: hidden;
+}
+/* column 2 */
+.col-2{
+    border-top: 3px var(--Red) solid; 
+    overflow: hidden;
+    /* margin-bottom: 10px; */
+}
+/* column 3 */
+.col-3{
+    border-top: 3px var(--Orange) solid; 
+    overflow: hidden;
+    /* margin-top: 20px; */
+}
+/* column 4 */
+.col-4{
+    border-top: 3px var(--Blue) solid; 
+    overflow: hidden;
+}
+@media (max-width: 600px) {
+    body{
+        /* overflow-x: hidden; */
+    }
+    main{
+        /* width: 500px; */
+        overflow-x : hidden;
+    }
+    section{
+        display: block;
+    }   
+    aside{
+        display: block;
+        overflow-x : hidden;
+    }
+    /* column 1 and column 4 */
+    .col-1, .col-2, .col-3, .col-4{ 
+        margin: 0px;
+        margin-top: 20px;
+    }
+    /* center text */
+    .txt{
+        text-align: center;
+        width: 87%;
+        word-wrap: break-word;
+        margin: 0px 50px;    
+    } 
+} 
